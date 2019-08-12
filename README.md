@@ -1,0 +1,2 @@
+# DjangoMezzanineCfdt
+Django Mezzanine CFDT
