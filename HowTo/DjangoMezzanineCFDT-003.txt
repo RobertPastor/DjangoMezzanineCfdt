@@ -1,0 +1,334 @@
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. Tous droits réservés.
+
+PS C:\Windows\system32>
+PS C:\Windows\system32>
+PS C:\Windows\system32> pip3 install django psycopg2
+Requirement already satisfied: django in e:\program files\python37\lib\site-packages (1.11.23)
+Collecting psycopg2
+  Downloading https://files.pythonhosted.org/packages/3b/b4/b6db75663e1c73bb6190cbcbb02f94a36c574b813a353446087cbdf43712
+/psycopg2-2.8.3-cp37-cp37m-win_amd64.whl (1.1MB)
+     |████████████████████████████████| 1.1MB 6.8MB/s
+Requirement already satisfied: pytz in e:\program files\python37\lib\site-packages (from django) (2019.2)
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.8.3
+PS C:\Windows\system32>
+PS C:\Windows\system32> cd e:
+PS E:\> ls
+
+
+    Répertoire : E:\
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----        17/12/2017     12:10            angles
+d----        26/06/2016     13:37            antlr4-python2-runtime-4.5.3
+d----        17/12/2017     12:10            AntlrOraclePlSql
+d----        27/12/2015     18:26            apache-ant-1.9.6
+d----        21/01/2019     19:47            Applications
+d----        17/12/2017     12:10            bibliotheque
+d----        02/08/2019     08:25            cfdt
+d----        02/07/2018     22:04            CPlusPlus
+d----        18/03/2018     16:37            curl-7.59.0-win64-mingw
+d----        04/08/2018     18:31            cygwin64
+d----        17/12/2017     12:12            DayPilotLiteJS
+d----        24/03/2016     23:34            django-reservation
+d----        17/12/2017     12:10            Documents
+d----        25/07/2015     14:58            Download Directory
+d----        28/01/2018     12:33            Downloads
+d----        21/07/2019     10:33            eclipse
+d----        02/08/2019     08:17            eclipse-photon
+d----        18/05/2019     10:46            Famille PASTOR-BOINAY
+d----        17/12/2017     12:10            FlightDynamics
+d----        13/09/2015     19:23            FlightDynamics 13 Sept 2015
+d-r--        20/07/2019     09:43            Images
+d-r--        18/03/2018     09:22            iTunes
+d----        17/12/2017     12:10            MESTRA JAVA TOOL
+d----        28/07/2016     10:29            MESTRA TOOL
+d----        02/08/2019     07:46            mezzanine-env
+d----        21/09/2017     18:49            Microsoft Visual Studio
+d----        17/12/2017     15:10            music-rungis
+d----        23/06/2019     16:16            Node.js
+d----        17/12/2017     12:11            ORSYS
+d----        17/12/2017     12:11            Packard Bell Drivers
+d----        17/12/2017     12:08            plsql-parser-master-new
+d----        17/12/2017     12:08            plsqp-parser-master-python
+d----        24/03/2019     16:31            Program Files
+d----        05/08/2018     19:56            Program Files (x86)
+d----        29/01/2018     17:27            temp
+d----        04/08/2018     18:29            Users
+d----        02/07/2019     15:56            workspace
+d----        27/07/2019     06:21            workspace-java8
+-a---        29/11/2015     15:35         36 .superId
+-a---        29/05/2015     17:20   26827204 Design patterns-Tete la première.pdf
+-a---        28/05/2015     12:33    4299093 Django, développement Web avec Python.pdf
+-a---        10/12/2017     22:57     526167 ebnf.pdf
+-a---        26/06/2015     08:41       7543 functionMetadata.txt
+-a---        02/02/2007     13:06    3375339 LaunchPad.zip
+-ar--        16/11/2006     12:26    1095224 LaunchU3.exe
+-a---        29/05/2015     17:20    4893377 livre_python_notes_hyper.pdf
+-a---        18/11/2015     22:28    6565217 The Definitive ANTLR 4 Reference.pdf
+
+
+PS E:\> cd cfdt
+PS E:\cfdt> ls
+
+
+    Répertoire : E:\cfdt
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----        02/08/2019     07:56            cfdt
+d----        02/08/2019     07:56            deploy
+d----        02/08/2019     08:31            How
+d----        02/08/2019     07:58            static
+-a---        02/08/2019     07:56         63 .gitignore
+-a---        02/08/2019     07:56         93 .hgignore
+-a---        02/08/2019     08:28        432 .project
+-a---        02/08/2019     08:27        632 .pydevproject
+-a---        02/08/2019     07:59     421888 dev.db
+-a---        02/08/2019     07:56      22751 fabfile.py
+-a---        02/08/2019     07:56        382 manage.py
+-a---        02/08/2019     07:56         17 requirements.txt
+
+
+PS E:\cfdt> pwd
+
+Path
+----
+E:\cfdt
+
+
+PS E:\cfdt> python3 manage.py makemigrations
+Traceback (most recent call last):
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
+    self.connect()
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\postgresql\base.py", line 176, in get_new_connect
+ion
+    connection = Database.connect(**conn_params)
+  File "e:\Program Files\python37\lib\site-packages\psycopg2\__init__.py", line 126, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 14, in <module>
+    execute_from_command_line(sys.argv)
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\__init__.py", line 364, in execute_from_comma
+nd_line
+    utility.execute()
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\__init__.py", line 356, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\base.py", line 283, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\base.py", line 330, in execute
+    output = self.handle(*args, **options)
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\commands\makemigrations.py", line 110, in han
+dle
+    loader.check_consistent_history(connection)
+  File "e:\Program Files\python37\lib\site-packages\django\db\migrations\loader.py", line 283, in check_consistent_histo
+ry
+    applied = recorder.applied_migrations()
+  File "e:\Program Files\python37\lib\site-packages\django\db\migrations\recorder.py", line 65, in applied_migrations
+    self.ensure_schema()
+  File "e:\Program Files\python37\lib\site-packages\django\db\migrations\recorder.py", line 52, in ensure_schema
+    if self.Migration._meta.db_table in self.connection.introspection.table_names(self.connection.cursor()):
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 254, in cursor
+    return self._cursor()
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
+    self.connect()
+  File "e:\Program Files\python37\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "e:\Program Files\python37\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
+    self.connect()
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\postgresql\base.py", line 176, in get_new_connect
+ion
+    connection = Database.connect(**conn_params)
+  File "e:\Program Files\python37\lib\site-packages\psycopg2\__init__.py", line 126, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError
+PS E:\cfdt>
+PS E:\cfdt>
+PS E:\cfdt> python3 manage.py migrate
+Traceback (most recent call last):
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
+    self.connect()
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\postgresql\base.py", line 176, in get_new_connect
+ion
+    connection = Database.connect(**conn_params)
+  File "e:\Program Files\python37\lib\site-packages\psycopg2\__init__.py", line 126, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 14, in <module>
+    execute_from_command_line(sys.argv)
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\__init__.py", line 364, in execute_from_comma
+nd_line
+    utility.execute()
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\__init__.py", line 356, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\base.py", line 283, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\base.py", line 330, in execute
+    output = self.handle(*args, **options)
+  File "e:\Program Files\python37\lib\site-packages\django\core\management\commands\migrate.py", line 83, in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+  File "e:\Program Files\python37\lib\site-packages\django\db\migrations\executor.py", line 20, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "e:\Program Files\python37\lib\site-packages\django\db\migrations\loader.py", line 52, in __init__
+    self.build_graph()
+  File "e:\Program Files\python37\lib\site-packages\django\db\migrations\loader.py", line 210, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "e:\Program Files\python37\lib\site-packages\django\db\migrations\recorder.py", line 65, in applied_migrations
+    self.ensure_schema()
+  File "e:\Program Files\python37\lib\site-packages\django\db\migrations\recorder.py", line 52, in ensure_schema
+    if self.Migration._meta.db_table in self.connection.introspection.table_names(self.connection.cursor()):
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 254, in cursor
+    return self._cursor()
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
+    self.connect()
+  File "e:\Program Files\python37\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "e:\Program Files\python37\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
+    self.connect()
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\base\base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "e:\Program Files\python37\lib\site-packages\django\db\backends\postgresql\base.py", line 176, in get_new_connect
+ion
+    connection = Database.connect(**conn_params)
+  File "e:\Program Files\python37\lib\site-packages\psycopg2\__init__.py", line 126, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError
+PS E:\cfdt>
+PS E:\cfdt> cd ..
+PS E:\>
+PS E:\>
+PS E:\> pwd
+
+Path
+----
+E:\
+
+
+PS E:\>
+PS E:\> pwd
+
+Path
+----
+E:\
+
+
+PS E:\> mezzanine-project cfdt
+PS E:\> ls
+
+
+    Répertoire : E:\
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----        17/12/2017     12:10            angles
+d----        26/06/2016     13:37            antlr4-python2-runtime-4.5.3
+d----        17/12/2017     12:10            AntlrOraclePlSql
+d----        27/12/2015     18:26            apache-ant-1.9.6
+d----        21/01/2019     19:47            Applications
+d----        17/12/2017     12:10            bibliotheque
+d----        02/08/2019     09:03            cfdt
+d----        02/07/2018     22:04            CPlusPlus
+d----        18/03/2018     16:37            curl-7.59.0-win64-mingw
+d----        04/08/2018     18:31            cygwin64
+d----        17/12/2017     12:12            DayPilotLiteJS
+d----        24/03/2016     23:34            django-reservation
+d----        17/12/2017     12:10            Documents
+d----        25/07/2015     14:58            Download Directory
+d----        28/01/2018     12:33            Downloads
+d----        21/07/2019     10:33            eclipse
+d----        02/08/2019     08:17            eclipse-photon
+d----        18/05/2019     10:46            Famille PASTOR-BOINAY
+d----        17/12/2017     12:10            FlightDynamics
+d----        13/09/2015     19:23            FlightDynamics 13 Sept 2015
+d-r--        20/07/2019     09:43            Images
+d-r--        18/03/2018     09:22            iTunes
+d----        17/12/2017     12:10            MESTRA JAVA TOOL
+d----        28/07/2016     10:29            MESTRA TOOL
+d----        02/08/2019     07:46            mezzanine-env
+d----        21/09/2017     18:49            Microsoft Visual Studio
+d----        17/12/2017     15:10            music-rungis
+d----        23/06/2019     16:16            Node.js
+d----        17/12/2017     12:11            ORSYS
+d----        17/12/2017     12:11            Packard Bell Drivers
+d----        17/12/2017     12:08            plsql-parser-master-new
+d----        17/12/2017     12:08            plsqp-parser-master-python
+d----        24/03/2019     16:31            Program Files
+d----        05/08/2018     19:56            Program Files (x86)
+d----        29/01/2018     17:27            temp
+d----        04/08/2018     18:29            Users
+d----        02/07/2019     15:56            workspace
+d----        27/07/2019     06:21            workspace-java8
+-a---        29/11/2015     15:35         36 .superId
+-a---        29/05/2015     17:20   26827204 Design patterns-Tete la première.pdf
+-a---        28/05/2015     12:33    4299093 Django, développement Web avec Python.pdf
+-a---        10/12/2017     22:57     526167 ebnf.pdf
+-a---        26/06/2015     08:41       7543 functionMetadata.txt
+-a---        02/02/2007     13:06    3375339 LaunchPad.zip
+-ar--        16/11/2006     12:26    1095224 LaunchU3.exe
+-a---        29/05/2015     17:20    4893377 livre_python_notes_hyper.pdf
+-a---        18/11/2015     22:28    6565217 The Definitive ANTLR 4 Reference.pdf
+
+
+PS E:\>
+PS E:\> cd cfdt
+PS E:\cfdt>
+
+configure post gres database
+
+/cfdt/cfdt/local_settings.py
+
+# This file is exec'd from settings.py, so it has access to and can
+# modify all the variables in settings.py.
+
+DEBUG = True
+
+# Make these unique, and don't share it with anybody.
+SECRET_KEY = "a_6xzquu^+mxjyn$*t&ke-t$++f5b959%ri6-&e@9_!jw1c3o@"
+NEVERCACHE_KEY = "+j2yy^qfode@2tk4h!&$9g%6u_-qz2c(42-5%azo3^z1vbls&4"
+
+DATABASES = {
+    "default": {
+        # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #"ENGINE": "django.db.backends.sqlite3",
+        # DB name or path to database file if using sqlite3.
+        "NAME": "cfdt",
+        # Not used with sqlite3.
+        "USER": "admin",
+        # Not used with sqlite3.
+        "PASSWORD": "bobby1xx",
+        # Set to empty string for localhost. Not used with sqlite3.
+        "HOST": "",
+        # Set to empty string for default. Not used with sqlite3.
+        "PORT": "",
+    }
+}
+
+

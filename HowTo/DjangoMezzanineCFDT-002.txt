@@ -1,0 +1,15 @@
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. Tous droits réservés.
+
+PS C:\Windows\system32>
+PS C:\Windows\system32>
+PS C:\Windows\system32> pip3 install django psycopg2
+Requirement already satisfied: django in e:\program files\python37\lib\site-packages (1.11.23)
+Collecting psycopg2
+  Downloading https://files.pythonhosted.org/packages/3b/b4/b6db75663e1c73bb6190cbcbb02f94a36c574b813a353446087cbdf43712
+/psycopg2-2.8.3-cp37-cp37m-win_amd64.whl (1.1MB)
+     |████████████████████████████████| 1.1MB 6.8MB/s
+Requirement already satisfied: pytz in e:\program files\python37\lib\site-packages (from django) (2019.2)
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.8.3
+PS C:\Windows\system32>
