@@ -1,0 +1,77 @@
+﻿-----------------------
+launch psql shell
+create database
+
+$ psql
+psql (9.3.4)
+Type "help" for help.
+#
+
+server = localhost
+port = 5432
+
+create database
+name = postgres
+
+create user name = postgres
+
+
+-----------------------------------
+
+# Allowed development hosts
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "::1"]
+
+
+--------------- modify settings ------------------
+
+DATABASES = {
+    "default": {
+        # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #"ENGINE": "django.db.backends.sqlite3",
+        # DB name or path to database file if using sqlite3.
+        "NAME": "postgres",
+        # Not used with sqlite3.
+        "USER": "postgres",
+        # Not used with sqlite3.
+        "PASSWORD": "",
+        # Set to empty string for localhost. Not used with sqlite3.
+        "HOST": "",
+        # Set to empty string for default. Not used with sqlite3.
+        "PORT": "5432",
+    }
+}
+
+-----------------------------------
+
+create a super user
+
+
+-----------------
+launch python manage.py runserver
+
+              .....
+          _d^^^^^^^^^b_
+       .d''           ``b.
+     .p'                `q.
+    .d'                   `b.
+   .d'                     `b.   * Mezzanine 4.3.1
+   ::                       ::   * Django 1.11.23
+  ::    M E Z Z A N I N E    ::  * Python 3.7.2
+   ::                       ::   * PostgreSQL 9.5.1
+   `p.                     .q'   * Windows 7
+    `p.                   .q'
+     `b.                 .d'
+       `q..          ..p'
+          ^q........p^
+              ''''
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 15, 2019 - 07:48:12
+Django version 1.11.23, using settings 'cfdt.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+
